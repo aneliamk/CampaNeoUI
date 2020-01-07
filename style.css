@@ -1,0 +1,103 @@
+body{
+	background-color: #003366;
+	padding-top: 20px;
+}
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,700);
+
+$base: #fff;
+$orange: #f66538;
+$green: #5eda37;
+$purple: #f16bf3;
+$yellow: #e3ea77;
+$blue: #7ca6de;
+
+body {
+font-family:'Raleway';
+background-image: url(https://subtlepatterns.com/patterns/random_grey_variations.png);
+}
+
+.wrapper {
+	width:90%;
+}
+h1{
+      text-align:center;
+      color: white;
+      font-size: 30pt;
+}
+
+.blocks {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+.block {
+  float:left;
+  margin-top:50px;
+  margin-left:50px;
+
+  position:relative;
+  background: white;
+  color: $base;
+  width: 11.85%;
+  margin-right:4%;
+  min-width:250px;
+  height: 200px;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, .3);
+  text-align: left;
+  overflow:hidden;
+  
+  -webkit-backface-visibility: hidden;
+  
+  border:solid 1px #000;
+}
+
+img{
+	width: 250px;
+	height:200px;
+
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:#003366;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+text-decoration: underline;}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+div.bottom {
+  padding-top: 450pt;
+} 
