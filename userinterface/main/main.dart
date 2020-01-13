@@ -55,7 +55,8 @@ class _MyHomePage extends State<MyHomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ActiveCampaigns()),
+                      MaterialPageRoute(
+                          builder: (context) => ActiveCampaigns()),
                     );
                   }),
               ListTile(
@@ -63,19 +64,20 @@ class _MyHomePage extends State<MyHomePage> {
                 title: Text('Campaign History'),
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CampaignHistory()),
-                    );
+                    context,
+                    MaterialPageRoute(builder: (context) => CampaignHistory()),
+                  );
                 },
               ),
               ListTile(
                 leading: Icon(Icons.local_taxi),
                 title: Text('Vehicle Information'),
                 onTap: () {
-                 Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => VehicleInformation()),
-                    );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => VehicleInformation()),
+                  );
                 },
               ),
               ListTile(
@@ -83,9 +85,9 @@ class _MyHomePage extends State<MyHomePage> {
                 title: Text('About CampaNeo'),
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => About()),
-                    );
+                    context,
+                    MaterialPageRoute(builder: (context) => About()),
+                  );
                 },
               ),
             ],
@@ -103,14 +105,24 @@ class _MyHomePage extends State<MyHomePage> {
           mainAxisSpacing: 10,
           crossAxisCount: 3,
           children: <Widget>[
-            Container(
-              padding: const EdgeInsets.all(9),
-              child: Image.asset(
-                'logo/volkswagen.jpg',
-                fit: BoxFit.cover,
+            ///////////////
+            new GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Volkswagen()),
+                );
+              },
+              child: new Container(
+                padding: const EdgeInsets.all(9),
+                child: Image.asset(
+                  'logo/volkswagen.jpg',
+                  fit: BoxFit.cover,
+                ),
+                color: Colors.blue,
               ),
-              color: Colors.blue,
             ),
+            ////////////////
             Container(
               padding: const EdgeInsets.all(8),
               child: Image.asset(
@@ -156,7 +168,6 @@ class _MyHomePage extends State<MyHomePage> {
   }
 } //MyHomePage
 
-
 //page Active Campaigns
 class ActiveCampaigns extends StatelessWidget {
   @override
@@ -176,6 +187,7 @@ class ActiveCampaigns extends StatelessWidget {
     );
   }
 }
+
 //page Campaign History
 class CampaignHistory extends StatelessWidget {
   @override
@@ -195,6 +207,7 @@ class CampaignHistory extends StatelessWidget {
     );
   }
 }
+
 //page Vehicle Information
 class VehicleInformation extends StatelessWidget {
   @override
@@ -214,6 +227,7 @@ class VehicleInformation extends StatelessWidget {
     );
   }
 }
+
 //page About
 class About extends StatelessWidget {
   @override
@@ -231,5 +245,25 @@ class About extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+//page Volkswagen
+class Volkswagen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Campaign: Volkswagen"),
+      ),
+      body: Container(
+        color: Colors.blue,
+        margin: EdgeInsets.only(top: 100, bottom: 100, left: 150, right: 150),
+              padding:
+              const EdgeInsets.only(left: 250, right: 250, top: 50, bottom: 50),
+        
+        ),
+      );
+    
   }
 }
