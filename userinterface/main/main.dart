@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'ActiveCampaigns.dart';
+import 'CampaignHistory.dart';
+import 'AboutCampaNeo.dart';
+import 'VehicleInformation.dart';
 
 void main() {
   runApp(new MyApp());
@@ -168,85 +172,6 @@ class _MyHomePage extends State<MyHomePage> {
   }
 } //MyHomePage
 
-//page Active Campaigns
-class ActiveCampaigns extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Active Campaigns"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            // Navigate back to first route when tapped.
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-
-//page Campaign History
-class CampaignHistory extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Campaign History"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            // Navigate back to first route when tapped.
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-
-//page Vehicle Information
-class VehicleInformation extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Vehicle Information"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            // Navigate back to first route when tapped.
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-
-//page About
-class About extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("About CampaNeo"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            // Navigate back to first route when tapped.
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
 
 //page Volkswagen
 class Volkswagen extends StatelessWidget {
