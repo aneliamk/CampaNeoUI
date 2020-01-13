@@ -17,7 +17,21 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+//create a stateful widget
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePage createState() => new _MyHomePage();
+}
+
+class _MyHomePage extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -36,35 +50,42 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.timer),
-                title: Text('Active Campaigns'),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
+                  leading: Icon(Icons.timer),
+                  title: Text('Active Campaigns'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ActiveCampaigns()),
+                    );
+                  }),
               ListTile(
                 leading: Icon(Icons.book),
                 title: Text('Campaign History'),
                 onTap: () {
-                  // Update the state of the app.
-                  // ...
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CampaignHistory()),
+                    );
                 },
               ),
               ListTile(
                 leading: Icon(Icons.local_taxi),
                 title: Text('Vehicle Information'),
                 onTap: () {
-                  // Update the state of the app.
-                  // ...
+                 Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => VehicleInformation()),
+                    );
                 },
               ),
               ListTile(
                 leading: Icon(Icons.info_outline),
                 title: Text('About CampaNeo'),
                 onTap: () {
-                  // Update the state of the app.
-                  // ...
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => About()),
+                    );
                 },
               ),
             ],
@@ -74,8 +95,7 @@ class MyHomePage extends StatelessWidget {
           title: new Text('Campaigns'),
         ),
         //The body contains the main GridView with all Campaigns
-        body:
-         new GridView.count(
+        body: new GridView.count(
           primary: false,
           padding:
               const EdgeInsets.only(left: 250, right: 250, top: 50, bottom: 50),
@@ -90,7 +110,6 @@ class MyHomePage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               color: Colors.blue,
-              
             ),
             Container(
               padding: const EdgeInsets.all(8),
@@ -132,8 +151,85 @@ class MyHomePage extends StatelessWidget {
               ),
               color: Colors.blue,
             ),
-            
           ],
         ));
+  }
+} //MyHomePage
+
+
+//page Active Campaigns
+class ActiveCampaigns extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Active Campaigns"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+//page Campaign History
+class CampaignHistory extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Campaign History"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+//page Vehicle Information
+class VehicleInformation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Vehicle Information"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+//page About
+class About extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("About CampaNeo"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
   }
 }
