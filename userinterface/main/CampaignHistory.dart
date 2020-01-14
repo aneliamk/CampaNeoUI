@@ -23,9 +23,8 @@ class _CampaignHistory extends State<CampaignHistory> {
       ),
       body: Container(
         color: Colors.blue,
-        margin: EdgeInsets.only(top: 100, bottom: 100, left: 150, right: 150),
-        padding:
-            const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
+        margin: EdgeInsets.only(top: 60, bottom: 145, left: 150, right: 150),
+        
         child: Column(children: <Widget>[
           Container(
             color: Colors.white,
@@ -34,7 +33,7 @@ class _CampaignHistory extends State<CampaignHistory> {
               children: [
                 TableRow(children: [
                   Container(
-                    padding: EdgeInsets.all(25.0),
+                    padding: EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
                     child: new Column(children: [
                       Image.asset('logo/volkswagen.jpg'),
                     ]),
@@ -71,10 +70,57 @@ class _CampaignHistory extends State<CampaignHistory> {
                         animation: true,
                         animationDuration: 1000,
                         lineHeight: 20.0,
-                        percent: 0.9,
-                        center: Text("90.0%"),
+                        percent: 0.25,
+                        center: Text("25.0%"),
                         linearStrokeCap: LinearStrokeCap.butt,
-                        progressColor: Colors.blue,
+                        progressColor: Colors.red,
+                      ),
+                    ]),
+                  )
+                ]),
+                TableRow(children: [
+                  Container(
+                    padding: EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
+                    child: new Column(children: [
+                      Image.asset('logo/seat.png'),
+                    ]),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top: 100),
+                    child: new Column(children: [
+                      Text(
+                        'Campaign:',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Tracking user behaviour in populated areas for...',
+                        style: TextStyle(height: 1, fontSize: 14),
+                      ),
+                      ButtonTheme(
+                        minWidth: 150.0,
+                        height: 19.0,
+                        child: RaisedButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Details",
+                            style: TextStyle(fontSize: 19),
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top: 150),
+                    child: new Column(children: [
+                      new LinearPercentIndicator(
+                        width: 170.0,
+                        animation: true,
+                        animationDuration: 1000,
+                        lineHeight: 20.0,
+                        percent: 1.0,
+                        center: Text("100.0%"),
+                        linearStrokeCap: LinearStrokeCap.butt,
+                        progressColor: Colors.green,
                       ),
                     ]),
                   )
