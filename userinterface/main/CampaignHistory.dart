@@ -24,7 +24,6 @@ class _CampaignHistory extends State<CampaignHistory> {
       body: Container(
         color: Colors.blue,
         margin: EdgeInsets.only(top: 60, bottom: 145, left: 150, right: 150),
-        
         child: Column(children: <Widget>[
           Container(
             color: Colors.white,
@@ -33,13 +32,14 @@ class _CampaignHistory extends State<CampaignHistory> {
               children: [
                 TableRow(children: [
                   Container(
-                    padding: EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
+                    padding: EdgeInsets.only(
+                        top: 20, bottom: 20, left: 20, right: 20),
                     child: new Column(children: [
                       Image.asset('logo/volkswagen.jpg'),
                     ]),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 105),
+                    padding: EdgeInsets.only(top: 130),
                     child: new Column(children: [
                       Text(
                         'Campaign:',
@@ -63,24 +63,30 @@ class _CampaignHistory extends State<CampaignHistory> {
                     ]),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 150),
-                    child: new Column(children: [
-                      new LinearPercentIndicator(
-                        width: 170.0,
-                        animation: true,
-                        animationDuration: 1000,
-                        lineHeight: 20.0,
-                        percent: 0.25,
-                        center: Text("25.0%"),
-                        linearStrokeCap: LinearStrokeCap.butt,
-                        progressColor: Colors.red,
-                      ),
-                    ]),
-                  )
+                      padding: EdgeInsets.only(top: 135, right: 170),
+                      child: new Column(
+                        children: <Widget>[
+                          Text(
+                            'Expired',
+                            style: TextStyle(height: 3, fontSize: 14),
+                          ),
+                          LinearPercentIndicator(
+                            width: 170.0,
+                            animation: true,
+                            animationDuration: 1000,
+                            lineHeight: 20.0,
+                            percent: 0.25,
+                            center: Text("25.0%"),
+                            linearStrokeCap: LinearStrokeCap.butt,
+                            progressColor: Colors.red,
+                          )
+                        ],
+                      ))
                 ]),
                 TableRow(children: [
                   Container(
-                    padding: EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
+                    padding: EdgeInsets.only(
+                        top: 20, bottom: 20, left: 20, right: 20),
                     child: new Column(children: [
                       Image.asset('logo/seat.png'),
                     ]),
@@ -110,20 +116,25 @@ class _CampaignHistory extends State<CampaignHistory> {
                     ]),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 150),
-                    child: new Column(children: [
-                      new LinearPercentIndicator(
-                        width: 170.0,
-                        animation: true,
-                        animationDuration: 1000,
-                        lineHeight: 20.0,
-                        percent: 1.0,
-                        center: Text("100.0%"),
-                        linearStrokeCap: LinearStrokeCap.butt,
-                        progressColor: Colors.green,
-                      ),
-                    ]),
-                  )
+                      padding: EdgeInsets.only(top: 105, right: 170),
+                      child: new Column(
+                        children: <Widget>[
+                          Text(
+                            'Completed',
+                            style: TextStyle(height: 3, fontSize: 14),
+                          ),
+                          LinearPercentIndicator(
+                            width: 170.0,
+                            animation: true,
+                            animationDuration: 1000,
+                            lineHeight: 20.0,
+                            percent: 1.0,
+                            center: Text("100.0%"),
+                            linearStrokeCap: LinearStrokeCap.butt,
+                            progressColor: Colors.green,
+                          )
+                        ],
+                      ))
                 ]),
               ],
             ),
