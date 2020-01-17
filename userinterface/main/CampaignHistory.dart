@@ -23,7 +23,7 @@ class _CampaignHistory extends State<CampaignHistory> {
       ),
       body: Container(
         color: Colors.blue,
-        margin: EdgeInsets.only(top: 60, bottom: 145, left: 150, right: 150),
+        margin: EdgeInsets.only(top: 60, bottom: 80, left: 150, right: 140),
         child: Column(children: <Widget>[
           Container(
             color: Colors.white,
@@ -39,7 +39,7 @@ class _CampaignHistory extends State<CampaignHistory> {
                     ]),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 130),
+                    padding: EdgeInsets.only(top: 150),
                     child: new Column(children: [
                       Text(
                         'Campaign:',
@@ -63,7 +63,7 @@ class _CampaignHistory extends State<CampaignHistory> {
                     ]),
                   ),
                   Container(
-                      padding: EdgeInsets.only(top: 135, right: 170),
+                      padding: EdgeInsets.only(top: 135, right: 150),
                       child: new Column(
                         children: <Widget>[
                           Text(
@@ -71,7 +71,7 @@ class _CampaignHistory extends State<CampaignHistory> {
                             style: TextStyle(height: 3, fontSize: 14),
                           ),
                           LinearPercentIndicator(
-                            width: 170.0,
+                            width: 150.0,
                             animation: true,
                             animationDuration: 1000,
                             lineHeight: 20.0,
@@ -116,7 +116,7 @@ class _CampaignHistory extends State<CampaignHistory> {
                     ]),
                   ),
                   Container(
-                      padding: EdgeInsets.only(top: 105, right: 170),
+                      padding: EdgeInsets.only(top: 105, right: 150),
                       child: new Column(
                         children: <Widget>[
                           Text(
@@ -124,7 +124,7 @@ class _CampaignHistory extends State<CampaignHistory> {
                             style: TextStyle(height: 3, fontSize: 14),
                           ),
                           LinearPercentIndicator(
-                            width: 170.0,
+                            width: 150.0,
                             animation: true,
                             animationDuration: 1000,
                             lineHeight: 20.0,
