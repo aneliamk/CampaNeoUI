@@ -1,146 +1,201 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 void main() {
   runApp(new CampaignHistory());
 }
 
-class CampaignHistory extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return _CampaignHistory();
-  }
-}
-
-class _CampaignHistory extends State<CampaignHistory> {
+//page About
+class CampaignHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Campaign History"),
-      ),
-      body: Container(
-        color: Colors.blue,
-        margin: EdgeInsets.only(top: 60, bottom: 80, left: 150, right: 140),
-        child: Column(children: <Widget>[
-          Container(
-            color: Colors.white,
-            margin: EdgeInsets.all(10),
-            child: Table(
-              children: [
-                TableRow(children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                        top: 20, bottom: 20, left: 20, right: 20),
-                    child: new Column(children: [
-                      Image.asset('logo/volkswagen.jpg'),
-                    ]),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(top: 150),
-                    child: new Column(children: [
-                      Text(
-                        'Campaign:',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                      Text(
-                        'Speed tracking for traffic prevention...',
-                        style: TextStyle(height: 1, fontSize: 14),
-                      ),
-                      ButtonTheme(
-                        minWidth: 150.0,
-                        height: 19.0,
-                        child: RaisedButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Details",
-                            style: TextStyle(fontSize: 19),
+        appBar: AppBar(
+          title: Text("Campaign History: All past campaigns"),
+        ),
+        body: Column(
+          children: <Widget>[
+            Container(
+                margin: EdgeInsets.only(top: 80, left: 150, right: 100),
+                padding: const EdgeInsets.only(
+                    left: 20, right: 0, top: 20, bottom: 20),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.blue,
+                      width: 10,
+                    ),
+                    color: Colors.white),
+                child: Column(
+                  children: <Widget>[
+                    Table(children: [
+                      TableRow(children: [
+                        Text(""),
+                        Text(
+                          "Campaign",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline),
+                        ),
+                        Text(""),
+                        Text(
+                          "Status",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline),
+                        ),
+                        Text(""),
+                      ]),
+                      TableRow(children: [
+                        Container(
+                          width: 100,
+                          child: Image.asset(
+                            "logo/volkswagen.jpg",
+                            width: 100,
+                            height: 100,
                           ),
                         ),
-                      ),
-                    ]),
-                  ),
-                  Container(
-                      padding: EdgeInsets.only(top: 135, right: 150),
-                      child: new Column(
-                        children: <Widget>[
-                          Text(
-                            'Expired',
-                            style: TextStyle(height: 3, fontSize: 14),
-                          ),
-                          LinearPercentIndicator(
-                            width: 150.0,
-                            animation: true,
-                            animationDuration: 1000,
-                            lineHeight: 20.0,
-                            percent: 0.25,
-                            center: Text("25.0%"),
-                            linearStrokeCap: LinearStrokeCap.butt,
-                            progressColor: Colors.red,
-                          )
-                        ],
-                      ))
-                ]),
-                TableRow(children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                        top: 20, bottom: 20, left: 20, right: 20),
-                    child: new Column(children: [
-                      Image.asset('logo/seat.png'),
-                    ]),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(top: 100),
-                    child: new Column(children: [
-                      Text(
-                        'Campaign:',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                      Text(
-                        'Tracking user behaviour in populated areas for...',
-                        style: TextStyle(height: 1, fontSize: 14),
-                      ),
-                      ButtonTheme(
-                        minWidth: 150.0,
-                        height: 19.0,
-                        child: RaisedButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Details",
-                            style: TextStyle(fontSize: 19),
+                        Container(
+                          padding: EdgeInsets.only(top: 50),
+                          child: Text("Speed Tracking"),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 40, left: 45,right: 45),
+                          child: ButtonTheme(
+                            minWidth: 10.0,
+                            height: 10.0,
+                            child: RaisedButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Details",
+                                style: TextStyle(fontSize: 15),
+                              ),
+                            ),
                           ),
                         ),
-                      ),
-                    ]),
-                  ),
-                  Container(
-                      padding: EdgeInsets.only(top: 105, right: 150),
-                      child: new Column(
-                        children: <Widget>[
-                          Text(
-                            'Completed',
-                            style: TextStyle(height: 3, fontSize: 14),
+                        Container(
+                          padding: EdgeInsets.only(top: 50),
+                          child: Text("Completed"),
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(top: 50, right: 50),
+                            child: new Column(
+                              children: <Widget>[
+                                LinearPercentIndicator(
+                                  width: 150.0,
+                                  animation: true,
+                                  animationDuration: 1000,
+                                  lineHeight: 20.0,
+                                  percent: 1.0,
+                                  center: Text("100.0%"),
+                                  linearStrokeCap: LinearStrokeCap.butt,
+                                  progressColor: Colors.lightGreen,
+                                )
+                              ],
+                            ))
+                      ]),
+                      TableRow(children: [
+                        Container(
+                          width: 100,
+                          child: Image.asset(
+                            "logo/seat.png",
+                            width: 100,
+                            height: 100,
                           ),
-                          LinearPercentIndicator(
-                            width: 150.0,
-                            animation: true,
-                            animationDuration: 1000,
-                            lineHeight: 20.0,
-                            percent: 1.0,
-                            center: Text("100.0%"),
-                            linearStrokeCap: LinearStrokeCap.butt,
-                            progressColor: Colors.green,
-                          )
-                        ],
-                      ))
-                ]),
-              ],
-            ),
-          ),
-        ]),
-      ),
-    );
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 50),
+                          child: Text("Tire pressure monitoring"),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 40, left: 45,right: 45),
+                          child: ButtonTheme(
+                            minWidth: 10.0,
+                            height: 10.0,
+                            child: RaisedButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Details",
+                                style: TextStyle(fontSize: 15),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 50),
+                          child: Text("Expired"),
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(top: 50, right: 10),
+                            child: new Column(
+                              children: <Widget>[
+                                LinearPercentIndicator(
+                                  width: 150.0,
+                                  animation: true,
+                                  animationDuration: 1000,
+                                  lineHeight: 20.0,
+                                  percent: 0.5,
+                                  center: Text("50.0%"),
+                                  linearStrokeCap: LinearStrokeCap.butt,
+                                  progressColor: Colors.orange,
+                                )
+                              ],
+                            ))
+                      ]),
+                      TableRow(children: [
+                        Container(
+                          width: 100,
+                          child: Image.asset(
+                            "logo/skoda.jpg",
+                            width: 100,
+                            height: 100,
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 50),
+                          child: Text("User behaviour"),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 40, left: 45,right: 45),
+                          child: ButtonTheme(
+                            minWidth: 10.0,
+                            height: 10.0,
+                            child: RaisedButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Details",
+                                style: TextStyle(fontSize: 15),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 50),
+                          child: Text("Expired"),
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(top: 50, right: 10),
+                            child: new Column(
+                              children: <Widget>[
+                                LinearPercentIndicator(
+                                  width: 150.0,
+                                  animation: true,
+                                  animationDuration: 1000,
+                                  lineHeight: 20.0,
+                                  percent: 0.1,
+                                  center: Text("10.0%"),
+                                  linearStrokeCap: LinearStrokeCap.butt,
+                                  progressColor: Colors.red,
+                                )
+                              ],
+                            ))
+                      ])
+                    ]),
+                  ],
+                )),
+          ],
+        )
+        //add campaneo describtion before the table
+
+        );
   }
 }
